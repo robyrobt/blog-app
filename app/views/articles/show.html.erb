@@ -1,0 +1,16 @@
+<%= render @article %>
+
+<div><%= link_to 'Update article', edit_article_path %></div>
+<div><%= link_to 'Delete article', article_path(@article), data: {
+  turbo_method: :delete,
+  turbo_confirm: 'Are you sure?'
+} %></div>
+<div><%= link_to 'Show all articles', root_path %></div>
+
+<h2>Comments</h2>
+
+<%= render @article.comments %>
+
+<h2>Add a comment</h2>
+
+<%= render 'comments/form', article: @article %>
