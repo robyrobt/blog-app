@@ -1,7 +1,5 @@
 databases:
   - name: blog-app
-    databaseName: blog-app-development
-    user: blog-app
     plan: free
 
 services:
