@@ -1,16 +1,22 @@
-<%= render @article %>
+<div class='show-article'>
+  <div class='buttons-container'>
+    <%= link_to 'Update article', edit_article_path, class: 'link-button' %>
+    <%= link_to 'Delete article', article_path(@article), data: {
+      turbo_method: :delete,
+      turbo_confirm: 'Are you sure?'
+    }, class: 'link-button' %>
+    <%= link_to 'Show all articles', root_path, class: 'link-button' %>
+  </div>
 
-<div><%= link_to 'Update article', edit_article_path %></div>
-<div><%= link_to 'Delete article', article_path(@article), data: {
-  turbo_method: :delete,
-  turbo_confirm: 'Are you sure?'
-} %></div>
-<div><%= link_to 'Show all articles', root_path %></div>
+  <%= render @article %>
 
-<h2>Comments</h2>
+  <h2>Comments</h2>
 
-<%= render @article.comments %>
+  <%= render @article.comments %>
 
-<h2>Add a comment</h2>
+  <div class='comments-container'>
+    <p>Add a comment</p>
+    <%= render 'comments/form', article: @article %>
+  </div>
 
-<%= render 'comments/form', article: @article %>
+</div>

@@ -13,3 +13,146 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 10px;
+}
+
+.form-dialog,
+.comments-container,
+.article-dialog,
+.article-container,
+.show-article {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 10px;
+   background-color: #f5f5f5;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   margin-bottom: 10px;
+ }
+
+.comments-container,
+.article-dialog,
+.comment-dialog {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 10px;
+   background-color: white;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   margin-bottom: 10px;
+ }
+
+ .article-dialog,
+ .article-container {
+   padding: 20px;
+ }
+
+ .comments-container,
+ .comment-dialog {
+   padding: 5px;
+ }
+
+ .show-article {
+  padding-top: 10px;
+ }
+
+ .article {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+ }
+
+ .article:hover {
+  background-color: #f5f5f5;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: border-color 0.5s ease;
+  border: 1px solid white;
+ }
+
+.link-button {
+  padding: 10px 20px;
+  margin-block: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.article-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.article-body {
+  font-size: 16px;
+}
+
+.commenter {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.comment-body {
+  font-size: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inputs input {
+  padding: 2px;
+  border-radius: 5px;
+  border: 1px solid #989a9c;
+}
+
+.errors {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.comments-container > p {
+  font-size: 18px;
+  font-weight: bold;
+}
